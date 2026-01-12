@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" method="upgrade">
+    <name>Maps Package</name>
+    <author>Me</author>
+    <creationDate>today</creationDate>
+    <packagename>example_maps</packagename>
+    <version>1.0.0</version>
+    <description>Example package to display maps</description>
+    <blockChildUninstall>true</blockChildUninstall>
+    <files folder="constituents">
+        <file type="module" id="mod_example_maps" client="site">mod_example_maps</file>
+        <file type="plugin" id="example_mapapikey" group="system">plg_example_mapapikey</file>
+    </files>
+</extension>
