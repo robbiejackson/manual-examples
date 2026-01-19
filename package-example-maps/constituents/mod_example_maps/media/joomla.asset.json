@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "mod_example_maps",
+  "version": "1.0.0",
+  "description": "Example Map Module",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "mod_example_maps.osmmaps",
+      "type": "preset",
+      "dependencies": [
+        "mod_example_maps.ol-maps#script",
+        "mod_example_maps.openlayers#style",
+        "mod_example_maps.openlayers#script"
+      ]
+    },
+    {
+      "name": "mod_example_maps.ol-maps",
+      "type": "script",
+      "uri": "mod_example_maps/ol-maps.js",
+      "attributes": {
+        "defer": true
+      },
+      "dependencies": [
+        "core",
+        "mod_example_maps.openlayers"
+      ],
+      "version": "1.0"
+    },
+    {
+      "name": "mod_example_maps.openlayers",
+      "type": "script",
+      "uri": "https://cdn.jsdelivr.net/npm/ol@v10.7.0/dist/ol.js",
+      "dependencies": [
+      ],
+      "attributes": {
+        "defer": true
+      },
+      "version": "10.7.0"
+    },
+    {
+      "name": "mod_example_maps.openlayers",
+      "type": "style",
+      "uri": "https://cdn.jsdelivr.net/npm/ol@v10.7.0/ol.css",
+      "dependencies": [
+      ],
+      "attributes": {
+        "defer": true
+      },
+      "version": "10.7.0"
+    }
+  ]
+}

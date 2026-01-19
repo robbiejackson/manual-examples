@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_EXAMPLE_MAPS_NAME</name>
+    <version>1.0.1</version>
+    <author>me</author>
+    <creationDate>today</creationDate>
+    <description>MOD_EXAMPLE_MAPS_DESCRIPTION</description>
+    <namespace path="src">My\Module\ExampleMaps</namespace>
+    <files>
+        <folder module="mod_example_maps">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <media destination="mod_example_maps" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>js</folder>
+    </media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="lat"
+                    type="number"
+                    min="-90"
+                    max="90"
+                    label="MOD_EXAMPLE_MAPS_LATITUDE"
+                    />
+                <field
+                    name="long"
+                    type="number"
+                    min="-180"
+                    max="180"
+                    label="MOD_EXAMPLE_MAPS_LONGITUDE"
+                    />
+                <field
+                    name="zoom"
+                    type="integer"
+                    first="1"
+                    last="12"
+                    step="1"
+                    label="MOD_EXAMPLE_MAPS_ZOOM"
+                    />
+                <field
+                    name="pins"
+                    type="subform"
+                    label="MOD_EXAMPLE_MAPS_PINS"
+                    multiple="true"
+                    >
+                    <form>
+                        <field
+                            name="pinlat"
+                            type="number"
+                            label="MOD_EXAMPLE_MAPS_LATITUDE"
+                            min="-90"
+                            max="90"
+                        />
+                        <field
+                            name="pinlong"
+                            type="number"
+                            min="-180"
+                            max="180"
+                            label="MOD_EXAMPLE_MAPS_LONGITUDE"
+                        />
+                    </form>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

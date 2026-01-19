@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="plugin" group="system">
+    <name>PLG_SYSTEM_EXAMPLE_MAPAPIKEY_NAME</name>
+    <version>1.0</version>
+    <description>PLG_SYSTEM_EXAMPLE_MAPAPIKEY_DESCRIPTION</description>
+    <author>Me</author>
+	<creationDate>Today</creationDate>
+    <copyright>(C) 2024 Open Source Matters, Inc.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+    <namespace path="src">My\Plugin\System\ExampleMapAPIkey</namespace>
+    <files>
+		<folder plugin="example_mapapikey">services</folder>
+		<folder>src</folder>
+	</files>
+    <languages>
+		<language tag="en-GB">language/en-GB/plg_system_example_mapapikey.ini</language>
+		<language tag="en-GB">language/en-GB/plg_system_example_mapapikey.sys.ini</language>
+	</languages>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="apikey"
+					type="text"
+					label="PLG_SYSTEM_EXAMPLE_MAPAPIKEY_APIKEY"
+					description="PLG_SYSTEM_EXAMPLE_MAPAPIKEY_APIKEY_DESCRIPTION"
+					default=""
+					>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
