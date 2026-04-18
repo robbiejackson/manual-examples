@@ -10,6 +10,9 @@ class AjaxController extends BaseController
 {
     public function divide()
     {
+        // Implement ACL checks in your AJAX handlers:
+        // $this->app->getIdentity->authorise('core.edit', 'com_ajaxdemo');
+        
         // if you're using Joomla MVC then the Application instance is passed into the BaseController constructor
         // and stored as an instance variable $app which can be used your component Controllers
         $input = $this->app->input; 
