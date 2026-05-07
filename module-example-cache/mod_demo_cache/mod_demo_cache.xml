@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>Cache demo</name>
+    <version>1.0.1</version>
+    <description>Module demonstrating callback cache</description>
+    <author>me</author>
+    <creationDate>today</creationDate>
+    <namespace path="src">My\Module\CacheDemo</namespace>
+    <files>
+        <folder module="mod_demo_cache">services</folder>
+        <folder>src</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field
+                    name="cache"
+                    type="list"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    default="0"
+                    filter="integer"
+                    validate="options"
+                    >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="cache_time"
+                    type="number"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    default="0"
+                    filter="integer"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
