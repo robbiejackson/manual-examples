@@ -4,6 +4,8 @@ plg-shortcodes
 This is an example content plugin which serves as a 
 [plugin tutorial](https://manual.joomla.org/docs/building-extensions/plugins/basic-content-plugin/).
 
+It should be run on Joomla 6.1 or later. 
+
 It handles the events onContentPrepare and onContentAfterTitle, and:
 
 - replaces article shortcodes (in {} brackets) with field values (from the Joomla global configuration)

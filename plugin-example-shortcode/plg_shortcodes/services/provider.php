@@ -14,17 +14,16 @@ use My\Plugin\Content\Shortcodes\Extension\Shortcode;
         {
             $container->set(
                 PluginInterface::class,
-                function (Container $container) {
+                $container->lazy(Shortcode::class, function (Container $container) {
     
                     $config = (array) PluginHelper::getPlugin('content', 'shortcodes');
-                    $subject = $container->get(DispatcherInterface::class);
                     $app = Factory::getApplication();
                     
-                    $plugin = new Shortcode($subject, $config);
+                    $plugin = new Shortcode($config);
                     $plugin->setApplication($app);
     
                     return $plugin;
-                }
+                })
             );
         }
     };
