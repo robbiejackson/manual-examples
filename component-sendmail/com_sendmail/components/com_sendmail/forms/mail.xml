@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form> 
+    <fieldset name="details">
+        <field
+                name="recipient"
+                type="email"
+                label="COM_SENDMAIL_FORM_RECIPIENT"
+                required="true"
+                />
+        <field
+                name="selector"
+                type="radio"
+                label="COM_SENDMAIL_FORM_CHOICE"
+                default="0">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+        </field>
+        <field 
+                showon="selector:0"
+                name="subject" 
+                type="text" 
+                label="COM_SENDMAIL_FORM_SUBJECT"
+                size="40" 
+                />
+        <field
+                showon="selector:0"
+                name="body"
+                type="textarea"
+                label="COM_SENDMAIL_FORM_TEXT"
+                rows="8"
+                />
+        <field
+                showon="selector:1"
+                name="name"
+                type="text"
+                label="COM_SENDMAIL_FORM_NAME_PARAM"
+                />
+        <field
+                showon="selector:1"
+                name="p1"
+                type="text"
+                label="COM_SENDMAIL_FORM_P1_PARAM"
+                />
+        <field
+                showon="selector:1"
+                name="p2"
+                type="text"
+                label="COM_SENDMAIL_FORM_P2_PARAM"
+                />
+    </fieldset>
+</form>
