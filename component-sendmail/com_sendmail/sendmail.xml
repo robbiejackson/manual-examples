@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+
+    <name>com_sendmail</name>
+    <creationDate>today</creationDate>
+    <author>me</author>
+    <license>GPL v3</license>
+    <version>1.0.0</version>
+    <description>
+        An example component for sending a mail message
+    </description>
+
+    <namespace path="src">My\Component\Sendmail</namespace>
+
+    <files folder="components/com_sendmail">
+        <folder>forms</folder>
+        <folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <administration>
+        <files folder="administrator/components/com_sendmail">
+            <folder>services</folder>
+            <folder>language</folder>
+        </files>
+    </administration>
+
+    <scriptfile>script.php</scriptfile>
+
+</extension>
