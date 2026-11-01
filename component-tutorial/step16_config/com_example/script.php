@@ -36,6 +36,7 @@ return new class () implements ServiceProviderInterface {
 
         public function update(InstallerAdapter $parent): bool
         {
+          $this->setDefaultConfig($this->db);
           $this->app->enqueueMessage('Successfully updated.');
 
           return true;
@@ -43,6 +44,7 @@ return new class () implements ServiceProviderInterface {
 
         public function uninstall(InstallerAdapter $parent): bool
         {
+          $this->setDefaultConfig($this->db);
           $this->app->enqueueMessage('Successfully uninstalled.');
 
           return true;
@@ -55,7 +57,6 @@ return new class () implements ServiceProviderInterface {
 
         public function postflight(string $type, InstallerAdapter $parent): bool
         {
-          $this->setDefaultConfig($this->db);
           return true;
         }
 
